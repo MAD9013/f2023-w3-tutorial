@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>W3 - Box Model & Fonts</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar navbar--tall">
+      <div class="container">
+        <h1 class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 3</span>
+            <span class="navbar__title">Box Model & Fonts</span>
+          </a>
+        </h1>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./units.html" class="navbar__link">Units</a>
+            </li>
+            <li>
+              <a href="./box-model.html" class="navbar__link">Box Model</a>
+            </li>
+            <li>
+              <a href="./display.html" class="navbar__link">Display</a>
+            </li>
+            <li>
+              <a href="./alignment.html" class="navbar__link">Alignment</a>
+            </li>
+            <li>
+              <a href="./selectors-cascade.html" class="navbar__link">
+                Selector & Cascade
+              </a>
+            </li>
+            <li>
+              <a href="./typography.html" class="navbar__link">Typography</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <section class="topic-list">
+        <div class="container">
+          <h2>Topics</h2>
+          <ol class="topic-list__list">
+            <li>
+              <a href="./units.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Units</h3>
+                <p class="topic-list__desc">
+                  CSS provides us with a number of different types of units for
+                  setting properties such as <code>font-size</code>,
+                  <code>width</code>, <code>padding</code>, and much more.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./box-model.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Box Model</h3>
+                <p class="topic-list__desc">
+                  At the end of the day, all elements are just rendered as a box
+                  with
+                  <code>margin</code>, <code>border</code>,
+                  <code>padding</code>, and <code>content</code> whose size and
+                  design we can manipulate.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./display.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Display</h3>
+                <p class="topic-list__desc">
+                  The <code>display</code> affects things like whether or not to
+                  show the element on the page and how the elements layout is
+                  rendered.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./alignment.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Alignment</h3>
+                <p class="topic-list__desc">
+                  Lets take a look at the basic methods we can use to align
+                  elements that have a display of
+                  <code>block</code>, <code>inline-block</code>, or
+                  <code>inline</code>.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./selectors-cascade.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Selector & Cascade</h3>
+                <p class="topic-list__desc">
+                  One of the keys to learning CSS is learning how to effectively
+                  select the elements you want to style.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./typography.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Typography</h3>
+                <p class="topic-list__desc">
+                  Let's explore some basic CSS properties that we can use to
+                  style our type in the browser.
+                </p>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 3</span>
+            <span class="footer__title">Box Model & Fonts</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

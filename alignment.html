@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Alignment | W3 - Box Model & Fonts</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/display-complete.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/alignment.css" />
+
+    <!-- Loads fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 3</span>
+            <span class="navbar__title">Box Model & Fonts</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./units.html" class="navbar__link">Units</a>
+            </li>
+            <li>
+              <a href="./box-model.html" class="navbar__link">Box Model</a>
+            </li>
+            <li>
+              <a href="./display.html" class="navbar__link"> Display </a>
+            </li>
+            <li>
+              <a
+                href="./alignment.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Alignment
+              </a>
+            </li>
+            <li>
+              <a href="./selectors-cascade.html" class="navbar__link">
+                Selector & Cascade
+              </a>
+            </li>
+            <li>
+              <a href="./typography.html" class="navbar__link">Typography</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Alignment</h1>
+            <div class="banner__byline">
+              <p>
+                There are a lot of different ways to align content in CSS and
+                the value of the <code>display</code> property can affect how
+                the alignment works. Lets take a look at the basic methods we
+                can use to align elements that have a display of
+                <code>block</code>, <code>inline-block</code>, or
+                <code>inline</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Text Align</h2>
+          <div class="container--text parent">
+            <div>
+              <h3>Text Left</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt repellendus blanditiis inventore ab mollitia
+                consectetur labore, similique maxime repellat suscipit?
+              </p>
+            </div>
+            <div class="text-center">
+              <h3>Text Center</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt repellendus blanditiis inventore ab mollitia
+                consectetur labore, similique maxime repellat suscipit?
+              </p>
+            </div>
+            <div class="text-right">
+              <h3>Text Right</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt repellendus blanditiis inventore ab mollitia
+                consectetur labore, similique maxime repellat suscipit?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Centering Different Display Types</h2>
+          <div class="display-examples parent">
+            <div class="block w-1-2">Block - 50% Left</div>
+            <div class="block w-1-2 block-centered">Block - 50% Centered</div>
+            <div class="block w-1-2 block-right">Block - 50% Right</div>
+            <div class="text-center">
+              <div class="inline-block">Inline Block</div>
+            </div>
+            <div class="text-center">
+              <div class="inline-block">Inline Block</div>
+              <div class="inline-block w-1-2">Inline Block - 50% Width</div>
+            </div>
+            <div class="text-right">
+              <div class="inline-block">Inline Block</div>
+              <div class="inline">Inline</div>
+              <div class="inline">Inline</div>
+              <div class="inline">Inline</div>
+            </div>
+            <div class="text-left">
+              <div class="inline-block">Inline Block</div>
+              <div class="inline">Inline</div>
+              <div class="inline w-3-4">Inline</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 3</span>
+            <span class="footer__title">Box Model & Fonts</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

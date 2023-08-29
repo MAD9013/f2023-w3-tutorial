@@ -1,0 +1,39 @@
+.basic-outer {
+  max-width: 30rem;
+  background-color: red;
+}
+
+.basic-inner {
+  color: #fff;
+  background-color: green;
+}
+
+.content-outer,
+.border-outer {
+  width: 15rem;
+  margin: 0 0 1rem;
+  background-color: red;
+}
+
+.content-inner,
+.border-inner {
+  color: #fff;
+  background-color: green;
+}
+
+.content-outer {
+  box-sizing: content-box;
+}
+
+.border-outer {
+  box-sizing: border-box;
+}
+
+.row {
+  box-sizing: border-box;
+}
+
+.col {
+  width: 25%;
+  min-height: 10rem;
+}

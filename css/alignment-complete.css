@@ -1,0 +1,19 @@
+.block-centered {
+  margin: 0 auto;
+}
+
+.block-right {
+  margin-left: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

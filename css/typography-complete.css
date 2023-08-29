@@ -1,0 +1,57 @@
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.cursive {
+  font-family: cursive;
+}
+
+.drop-cap::first-letter {
+  font-weight: bold;
+  color: green;
+  font-size: 3rem;
+  float: left;
+  margin: 0 0.25rem -0.5rem 0;
+  margin-right: 0.25rem;
+  margin-bottom: -0.5rem;
+}
+
+.text-large {
+  font-size: 2rem;
+}
+
+.yelling {
+  text-transform: uppercase;
+}
+
+.double-spaced {
+  line-height: 3;
+}
+
+.letter-spacing {
+  letter-spacing: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justified {
+  /* NO THANKS */
+  /* NEVER USE THIS */
+  /* ITS BAD TYPOGRAPHY */
+  text-align: justify;
+}

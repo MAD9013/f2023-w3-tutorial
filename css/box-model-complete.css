@@ -1,0 +1,48 @@
+.basic-outer {
+  max-width: 30rem;
+  background-color: red;
+  margin: 2rem;
+  border: 0.5rem solid blue;
+  padding: 3rem;
+}
+
+.basic-inner {
+  color: #fff;
+  background-color: green;
+  margin: 2rem;
+  border: 0.5rem solid yellow;
+  padding: 3rem;
+}
+
+.content-outer,
+.border-outer {
+  width: 15rem;
+  margin: 0 0 1rem;
+  background-color: red;
+  padding: 3rem;
+}
+
+.content-inner,
+.border-inner {
+  color: #fff;
+  background-color: green;
+}
+
+.content-outer {
+  box-sizing: content-box;
+}
+
+.border-outer {
+  box-sizing: border-box;
+}
+
+.row {
+  box-sizing: border-box;
+}
+
+.col {
+  width: 25%;
+  min-height: 10rem;
+  padding: 2rem;
+  box-sizing: content-box;
+}

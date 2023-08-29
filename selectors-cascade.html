@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Selectors, Cascade &amp; Specificity | W3 - Box Model & Fonts</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/selectors-cascade.css" />
+
+    <!-- Loads fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 3</span>
+            <span class="navbar__title">Box Model & Fonts</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./units.html" class="navbar__link">Units</a>
+            </li>
+            <li>
+              <a href="./box-model.html" class="navbar__link">Box Model</a>
+            </li>
+            <li>
+              <a href="./display.html" class="navbar__link"> Display </a>
+            </li>
+            <li>
+              <a href="./alignment.html" class="navbar__link"> Alignment </a>
+            </li>
+            <li>
+              <a
+                href="./selectors-cascade.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Selector & Cascade
+              </a>
+            </li>
+            <li>
+              <a href="./typography.html" class="navbar__link">Typography</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">
+              Selectors, Cascade &amp; Specificity
+            </h1>
+            <div class="banner__byline">
+              <p>
+                One of the keys to learning CSS is learning how to effectively
+                select the elements you want to style. Understanding how the
+                browser interprets selectors, cascade and specificity is a must
+                to avoid bugs and frustration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Selectors</h2>
+          <h3 id="point-1" class="heading-3" tabindex="0">Heading 3</h3>
+          <p class="intro">
+            Lorem ipsum dolor sit amet,
+            <span>consectetur adipisicing</span> elit. Sunt, ex neque. Dolorum
+            nobis sequi facilis, saepe voluptas animi consectetur illum error
+            provident pariatur quasi enim ducimus dolorem laboriosam iusto
+            facere.
+          </p>
+          <p>
+            Doloremque voluptate <a href="#">perspiciatis dolorem</a>, commodi
+            numquam velit, iusto veritatis repudiandae unde vitae distinctio ex,
+            provident deleniti placeat voluptatibus animi! Nemo voluptatem
+            quibusdam eveniet quia obcaecati, adipisci aliquam suscipit eaque
+            sint.
+          </p>
+          <p>
+            Explicabo fugit error iste, dolores
+            <span class="red">possimus amet molestias</span> quos laboriosam
+            velit aperiam enim voluptatem sapiente! Animi error eius, iste,
+            voluptatem sequi aspernatur aperiam ducimus veniam voluptate
+            necessitatibus quas? Sunt, maxime?
+          </p>
+          <div class="note">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+              accusamus praesentium, enim eaque eveniet quia doloribus in
+              deleniti quis dolorem blanditiis vitae!
+            </p>
+            <div class="note-information">
+              <p>
+                Written by Jesse on
+                <time datetime="2020-09-12">September 12, 2020</time>
+              </p>
+            </div>
+          </div>
+          <h3 id="point-2" tabindex="0">Heading 3</h3>
+          <p>
+            Molestiae sint totam odit! Consequuntur perferendis iste, nesciunt
+            accusamus repellendus vitae, dolorem dignissimos autem iusto, vero
+            animi? Veniam eius quaerat quidem iste, obcaecati, voluptate autem
+            repellendus nulla eaque voluptatum nesciunt?
+          </p>
+          <p class="outro">
+            Commodi quia incidunt labore quibusdam unde animi blanditiis a
+            numquam, officiis saepe fugiat, reprehenderit doloremque!
+            Repellendus placeat, consequatur ea odit quam veniam vero esse
+            dolore laudantium illo sit iure ratione?
+          </p>
+          <ol class="list">
+            <li>List Item 1</li>
+            <li>
+              List Item 2
+              <ol>
+                <li>Sub Item 1</li>
+                <li>Sub Item 2</li>
+                <li>Sub Item 3</li>
+                <li>Sub Item 4</li>
+                <li>Sub Item 5</li>
+              </ol>
+            </li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+          </ol>
+
+          <div class="card">
+            <p>This is a card</p>
+          </div>
+          <a href="#" class="card">
+            <p>This is a link card</p>
+          </a>
+
+          <div class="pseudo-classes">
+            <h3>Pseudo Classes</h3>
+            <p class="no-color">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              enim sed, amet et itaque aperiam eligendi blanditiis est. Dolore
+              dolorem numquam soluta! Nulla, voluptatum impedit quis autem
+              maxime enim fuga!
+            </p>
+            <p>
+              Illo officia, eum quos beatae, distinctio nesciunt eaque rerum
+              saepe suscipit tempore dolore, eos asperiores! Officia, soluta
+              tempore commodi autem nisi consequatur nihil inventore aliquid et
+              fugit fugiat vitae. Quos.
+            </p>
+            <p>
+              Facilis maiores sint tempora nemo reiciendis provident cumque
+              inventore voluptatum hic, eveniet voluptatibus, est quasi eum
+              soluta ratione minus, possimus molestias laudantium reprehenderit
+              omnis fugiat autem aspernatur. Illum, nesciunt quidem.
+            </p>
+            <p>
+              Vero temporibus quia unde qui quibusdam odit tempora non incidunt
+              rem explicabo ipsam tenetur tempore quae, labore eveniet
+              doloremque placeat, corporis aspernatur molestiae error
+              dignissimos illo, veritatis eligendi ex. Sapiente.
+            </p>
+            <p>
+              Corrupti quaerat recusandae doloremque eius voluptates, in
+              corporis explicabo consectetur neque optio repellendus laboriosam
+              excepturi hic sed architecto maxime veniam nam accusamus
+              praesentium sit illum. Ad placeat officiis modi perspiciatis?
+            </p>
+            <p>
+              Reiciendis tenetur aliquam pariatur saepe tempore cupiditate
+              corporis officia voluptatibus odit consequuntur numquam, ratione
+              harum soluta autem animi maxime amet beatae? Eligendi quo odio
+              nemo. Commodi dolorum possimus accusamus quia.
+            </p>
+            <p>
+              Dolor, nostrum pariatur dolore fugiat expedita nobis aperiam,
+              placeat obcaecati tempore, soluta labore voluptates id. Mollitia
+              in doloremque harum rerum unde amet quisquam id perferendis facere
+              consequatur suscipit, porro quis?
+            </p>
+            <p>
+              Exercitationem nesciunt quae obcaecati soluta eius optio impedit
+              qui quisquam maxime ea dolor ut, libero itaque totam neque
+              aspernatur sint ex aut quam. Natus corrupti ducimus
+              necessitatibus, magnam iusto ex.
+            </p>
+            <p>
+              Architecto ea corrupti eveniet voluptatibus iusto, sint molestias
+              nostrum facere aperiam voluptates velit a, alias assumenda
+              perspiciatis praesentium reiciendis ipsam porro dicta aspernatur
+              tempore. Deserunt eius debitis nam necessitatibus pariatur.
+            </p>
+            <p>
+              Quia unde sequi reiciendis magni. Culpa error natus consequuntur
+              officia optio fuga iure quisquam, ab nam quasi eveniet
+              necessitatibus explicabo. Odit at beatae, doloremque molestias est
+              impedit mollitia. Nihil, neque.
+            </p>
+            <div>
+              <input id="example" name="example" type="checkbox" />
+              <label for="example">Checkbox</label>
+            </div>
+            <div>
+              <input id="email" name="email" type="email" required />
+              <label for="email">Email</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 3</span>
+            <span class="footer__title">Box Model & Fonts</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

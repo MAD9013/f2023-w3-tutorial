@@ -1,0 +1,119 @@
+/* The Basics & What's the most powerful? */
+#point-1 {
+  color: blue;
+}
+
+.heading-3 {
+  color: red;
+}
+
+h3 {
+  color: green;
+}
+
+/* Descendant Selector */
+.note p {
+  color: brown;
+}
+
+/* Child Selector */
+.note > p {
+  color: blue;
+}
+
+.note > time {
+  /* not doing anything since time is a great-grand-child of .note */
+  color: green;
+}
+
+/* Adjacent Sibling */
+h3 + p {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* General Sibling Sibling */
+h3 ~ p {
+  color: yellow;
+}
+
+/* Interaction Selectors */
+
+a {
+  color: green;
+}
+
+a:hover,
+a:focus {
+  color: purple;
+}
+
+a:active {
+  color: blue;
+}
+
+/* Attribute */
+/* [tabindex="0"] {
+  color: pink;
+} */
+
+/*
+Pseudo Classes - first, last, nth, not(), checked, target
+You can find a bunch more here: https://learn-the-web.algonquindesign.ca/topics/css-selectors-units-cheat-sheet/
+*/
+
+/* h3:first-child {
+  color: yellow;
+}
+
+p:last-child {
+  color: goldenrod;
+}
+
+p:last-of-type {
+  color: turquoise;
+}
+
+p:nth-child(3n + 2) {
+  color: green;
+}
+
+p:nth-of-type(3) {
+  color: brown;
+} */
+
+.card:not(a) {
+  color: orange;
+}
+
+input {
+  accent-color: green;
+  border-color: blue;
+}
+
+input:hover {
+  accent-color: red;
+  border-color: blue;
+}
+
+input {
+  accent-color: green;
+}
+
+input:checked + label {
+  color: green;
+}
+
+input {
+  border: 0.125rem solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
